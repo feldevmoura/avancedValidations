@@ -1,0 +1,19 @@
+Primeira coisa no flex-box é a direção
+
+  flex-direction: row, row-reverse, column e column-reverse
+
+Se quiser que tenha quebra de linha ou não.
+
+  flex-wrap: nowrap, wrap e wrap-reverse
+
+Alinhar items na vertical ou horizontal:
+
+  justify-content: flex-start, flex-end, center,space-between e space-around
+
+A posição da box que você quer que o elemento comece:
+
+  align-items: flex-start, flex-end, center, space-between e space-around
+
+
+
+

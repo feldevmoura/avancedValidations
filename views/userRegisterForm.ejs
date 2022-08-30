@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="div-child">
+    <form method="post" action="/" enctype="multipart/form-data" style="border: 0.1vw solid #ccc">
+
+      <h2>Registro de usuário</h2>
+
+      <div class="inputsAqui">
+        <label for="name"><b>Nome completo</b></label>
+        <input 
+        type="text" 
+        name="name" 
+        id="name"
+        value="<%= locals.oldData ? oldData.name : null %>">
+        <% if(locals.errors && errors.name){ %>
+          <div class="erro">
+            <%= errors.name.msg %>
+          </div>
+        <% } %>
+      </div>
+
+
+      <div class="inputsAqui">
+        <label for="email"><b>Email</b></label>
+        <input 
+         type="text" 
+         name="email" 
+         id="email"
+         value="<%= locals.oldData ? oldData.email :null%>"
+        >
+
+        <% if(locals.errors && errors.email){ %>
+          <div class="erro">
+            <%= errors.email.msg %>
+          </div>
+        <% } %>
+      </div>
+
+      <div class="inputsAqui">
+        <label for="psw"><b>Senha</b></label>
+        <input 
+         type="password"
+         name="psw" 
+         id="psw">
+        <% if(locals.errors && errors.psw){ %>
+          <div class="erro">
+            <%= errors.psw.msg %>
+          </div>
+        <% } %>
+      </div>
+
+      <div class="inputsAqui">
+        <label for="avatar"><b>Imagem de perfil</b></label>
+        <input
+         type="file" 
+         name="avatar"
+        >
+        <% if(locals.errors && errors.avatar){ %>
+          <div class="erro">
+            <%= errors.avatar.msg %>
+          </div>
+        <% } %>
+      </div>
+
+
+
+      <!-- <label for="psw-repeat"><b>Confirme a senha</b></label> -->
+
+      <div class="clearfix">
+        <button type="submit" class="signupbtn"><b>Registrar</b></button>
+      </div>
+
+    </form>
+  </div>
+</body>
+
+</html>
